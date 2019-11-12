@@ -25,7 +25,8 @@ def questionTwo(givenString, num):
     if givenString == "" or givenString == None:
         return "you need to provide a string!"
     num = num % len(givenString)
-    print(num)
+    if num == 0:
+        return givenString
     tempString = ""
     untouchedString = len(givenString) - num
     x = len(givenString) - 1
@@ -49,6 +50,8 @@ def questionTwoSplit(givenString, num):
     if givenString == "" or givenString == None:
         return "you need to provide a string!"
     num = num % len(givenString)
+    if num == 0:
+        return givenString
     splitLocation = len(givenString) - num
     answer = ""
     stringArray = [givenString[0:splitLocation],
